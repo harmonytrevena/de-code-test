@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import NewMessageForm from '../components/NewMessageForm';
+import Gratitude from '../components/Gratitude';
 
-describe('<NewMessageForm />', () => {
+describe('<Gratitude />', () => {
   let getByTestId;
 
   describe('clicking the send button', () => {
@@ -11,7 +11,7 @@ describe('<NewMessageForm />', () => {
 
     beforeEach(async () => {
     sendHandler = jest.fn().mockName('sendHandler');
-      ({ getByTestId } = render(<NewMessageForm onSend={sendHandler} />));
+      ({ getByTestId } = render(<Gratitude onSend={sendHandler} />));
 
     await userEvent.type(
         getByTestId('messageText'),

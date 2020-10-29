@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import NewMessageForm from './components/NewMessageForm';
-import MessageList from './components/MessageList';
+import Gratitude from './components/Gratitude';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -11,8 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <NewMessageForm onSend={_handleSend} />
-      <MessageList messages={messages} />
+      <Gratitude onSend={_handleSend}/>
     </div>
   );
 }
